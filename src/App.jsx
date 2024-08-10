@@ -1,5 +1,6 @@
-import './App.css'
 import Header from "./components/Header";
+import TextComponent from "./components/main/TextComponent";
+
 
 function App() {
  
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
     <Header />
+    <TextComponent />
     </>
 
      
