@@ -1,7 +1,5 @@
 import { ADD_TODO, REMOVE_TODO } from "./action.types";
 
-
-
 const Reducer= (state,action) =>{
     switch(action.type){
         case ADD_TODO:
@@ -12,3 +10,5 @@ const Reducer= (state,action) =>{
             return state;
     }
 }
+
+export default Reducer;
