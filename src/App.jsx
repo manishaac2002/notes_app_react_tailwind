@@ -4,6 +4,7 @@ import TextComponent from "./components/main/TextComponent";
 import reducer from "./components/context/reducer"
 import contextToDo from "./components/context/context";
 
+
 function App() {
 
 
@@ -14,6 +15,7 @@ function App() {
       <>
         <Header />
         <TextComponent />
+      
       </>
 
     </contextToDo.Provider>

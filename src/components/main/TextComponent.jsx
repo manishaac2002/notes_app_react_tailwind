@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
-import contextToDo from "../context/context";
 import { ADD_TODO } from "../context/action.types"
+import contextToDo from "../context/context"
+import DisplayNotes from '../context/DisplayNotes'
 
 
 const TextComponent = () => {
@@ -14,7 +15,7 @@ const TextComponent = () => {
     e.preventDefault()
 
     if (todoString == '') {
-      return alert('Please enter notes.'); // Show message if input is empty
+      return alert('Please enter notes.')
     }
 
     dispatch({
@@ -22,20 +23,35 @@ const TextComponent = () => {
       payload: todoString,
     })
 
-    setTodoString('') // Clear input field after submitting
+    setTodoString('') 
   }
 
   return (
-    <div className='grid grid-cols-2 m-2 gap-5 '>
-      <div className='border border-black'>
-        <form className='' onSubmit={handleClick}>
-          <input className=" border p-2 rounded" type="text" placeholder='Enter Notes'
-            onChange={(e) => setTodoString(e.target.value)}
-            value={todoString} />
-        </form>
+    <>
+
+
+      <div className='grid grid-cols-2 m-2 gap-5 '>
+
+        <div className='border border-red-600'>
+
+          <form className='' onSubmit={handleClick}>
+
+            <input className=" border p-2 rounded mb-4" type="text" placeholder='Enter Notes'
+              onChange={(e) => setTodoString(e.target.value)}
+              value={todoString} />
+          </form>
+
+        <DisplayNotes />
+
+        </div>
+        
+
+        <div className='border border-black '>TextComponent
+
+        </div>
       </div>
-      <div className='border border-black '>TextComponent</div>
-    </div>
+
+    </>
   )
 }
 
