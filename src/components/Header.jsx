@@ -1,7 +1,12 @@
 import React from 'react'
+import { useCurrentEditor } from '@tiptap/react'
+
 
 const header = () => {
+    const { editor } = useCurrentEditor()
+
     return (
+        
         <section className=" rounded-2xl m-2 p-5  mb-10 bg-gray-100">
 
             <div className="container mx-auto ">
